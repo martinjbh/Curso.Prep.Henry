@@ -1,21 +1,23 @@
 
-// numeros pares
+var users = {
 
+    barreiroMartin: {
 
-function prueba (n) {
-    for (let i = 0; i < n; i++) {
-       if(i%2 === 0){
-           console.log(i)
-           
-       }
-        
+        nombre: "martin",
+        password: 3313213,
+    },
+    martiasRoth: {
+        nombre: "matias",
+        password: 441221314,
     }
+
 }
 
-prueba(200)
+var obj = function (nombre, apellido, altura) {
 
-//
+    this.nombre = nombre
+    this.apellido = apellido
+    this.altura = altura
 
-
-
+}
 

@@ -87,14 +87,14 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  for (clave in objeto) {
-    if (clave == propiedad) {
-      return true
-    } else {
-      return false
-    }
-  }
-
+  //for (clave in objeto) {
+    //if (clave == propiedad) {
+     // return true
+    //} else {
+      //return false
+    //}
+  //}
+ return  objeto.hasOwnProperty(propiedad)
 
 }
 
@@ -145,6 +145,9 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+
+
+  
   for (let index = 0; index < usuarios.length; index++) {
 
 
