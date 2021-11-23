@@ -41,15 +41,17 @@ margin-left: 200px;
 #ejercicioCuatro{
     position: absolute;
     top: 0px;
+    position: fixed;
+   
 }
 
 /* Ejercicio 5: */
 
 /* Acá va tu código */
 #ejercicioCinco{
-    
+    align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row-reverse;
     
 }
