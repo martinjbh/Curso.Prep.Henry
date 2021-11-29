@@ -5,7 +5,7 @@ function mayuscula(nombre) {
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
 
-  var nueva = nombre[0].toUpperCase() + nombre.slice(1)
+  var nueva = nombre[0].toUpperCase() + nombre.slice(1)  //slice copia el valor del string del indice q yo quiera al q quiera slice(1,3)o slice(3,4)
   return nueva
 }
 

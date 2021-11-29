@@ -17,7 +17,7 @@ function deObjetoAmatriz(objeto) {
     array1.push([`"${clave}", ${objeto[clave]}`])
 
   }
-  console.log(array1)
+
 
 }
 
@@ -38,7 +38,7 @@ function numberOfCharacters(string) {
       repeticiones[letra] += 1
     }
   }
-  console.log(repeticiones)
+
 }
 
 
@@ -74,16 +74,15 @@ function asAmirror(str) {
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
 
-var nuevo = str.split(' ')
+  var nuevo = str.split(' ')
+  var palabra = ''
 
-for (let index = 0; index < nuevo.length; index++) {
-
-  console.log(nuevo[index])
-}
- console.log(nuevo)
- console.log(str)
-
-
+  for (let index = 0; index < nuevo.length; index++) {
+    for (let i = nuevo[index].length - 1; i >= 0; i--) {
+      palabra += nuevo[index][i]
+    }
+    palabra += ' '
+  }
 
 }
 
@@ -94,7 +93,14 @@ function capicua(numero) {
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
 
+  var numeroString = numero.toString()
+  if (numeroString[numeroString.length - 1] == numeroString[0] && numeroString[numeroString.length - 2] == numeroString[1]) {
 
+    return "Es capicua"
+
+  } else {
+    return "No es capicua"
+  }
 
 
 }
@@ -104,6 +110,20 @@ function deleteAbc(cadena) {
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+
+  var descarte = ''
+
+  for (let index = 0; index < cadena.length; index++) {
+
+    if (cadena[index] != "a" && cadena[index] != "b" && cadena[index] != "c") {
+
+
+      descarte+=cadena[index]
+    }
+
+  }
+  
+  return descarte
 }
 
 
@@ -111,8 +131,18 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
-}
+arr.sort(function(a,b){
+  console.log(a,b)
 
+  return a.length - b.length;
+})
+
+return arr
+
+
+
+
+}
 
 function buscoInterseccion(arreglo1, arreglo2) {
   //Existen dos arrays, cada uno con 5 números. A partir de ello, escribir una función que permita 
@@ -120,6 +150,7 @@ function buscoInterseccion(arreglo1, arreglo2) {
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+console.log(arreglo1, arreglo2)
 }
 
 
