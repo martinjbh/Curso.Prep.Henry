@@ -10,13 +10,18 @@ function deObjetoAmatriz(objeto) {
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-  var array1 = []
-  for (let clave in objeto) {
+  var matrizRetornar = []
 
 
-    array1.push([`"${clave}", ${objeto[clave]}`])
+  for (clave in objeto) {
+    let array = []
+    array.push(clave)
+    array.push(objeto[clave])
+    matrizRetornar.push(array)
 
   }
+
+  return matrizRetornar
 
 
 }
@@ -27,18 +32,18 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-  var repeticiones = {}
+  var resultado = {}
+
 
   for (let index = 0; index < string.length; index++) {
     var letra = string[index]
-    if (repeticiones[letra] === undefined) {
-
-      repeticiones[letra] = 1
+    if (resultado[letra] === undefined) {
+      resultado[letra] = 1
     } else {
-      repeticiones[letra] += 1
+      resultado[letra] += 1
     }
   }
-
+  return resultado
 }
 
 
@@ -74,15 +79,17 @@ function asAmirror(str) {
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
 
-  var nuevo = str.split(' ')
-  var palabra = ''
-
-  for (let index = 0; index < nuevo.length; index++) {
-    for (let i = nuevo[index].length - 1; i >= 0; i--) {
-      palabra += nuevo[index][i]
+  var espejo=str.split(' ')
+  var palabra=''
+  for (let index = 0; index < espejo.length; index++) {
+    for (let i = espejo[index].length-1 ; i >= 0; i--) {
+      
+      palabra+= espejo[index][i]
     }
-    palabra += ' '
+    palabra+=' '
+    
   }
+  return palabra.slice(0,-1)
 
 }
 
@@ -135,14 +142,19 @@ arr.sort(function(a,b){
   console.log(a,b)
 
   return a.length - b.length;
+
 })
 
 return arr
 
-
-
-
 }
+
+//    sort(next,prev) si es negativo la resta entre los dos me coloca next antes de prev.
+//                    si la resta entre los dos numeros es positivo me coloca prev antes q next.
+//                    si es cero no hace nada
+
+
+
 
 function buscoInterseccion(arreglo1, arreglo2) {
   //Existen dos arrays, cada uno con 5 números. A partir de ello, escribir una función que permita 
@@ -150,7 +162,23 @@ function buscoInterseccion(arreglo1, arreglo2) {
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
-console.log(arreglo1, arreglo2)
+  var nuevoArray=[]
+
+  for (let i = 0; i < arreglo1.length; i++) {
+  
+  
+  
+    for (let j = 0; j < arreglo2.length; j++) {
+      if(arreglo1[i]==arreglo2[j]){
+  
+        nuevoArray.push(arreglo1[i])
+      }
+    }
+  
+  
+  }
+  
+  return nuevoArray
 }
 
 
