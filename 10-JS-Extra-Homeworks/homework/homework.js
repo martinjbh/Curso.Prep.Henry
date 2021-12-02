@@ -149,8 +149,8 @@ return arr
 
 }
 
-//    sort(next,prev) si es negativo la resta entre los dos me coloca next antes de prev.
-//                    si la resta entre los dos numeros es positivo me coloca prev antes q next.
+//    sort(next,prev) si es negativo la resta entre los dos me coloca a antes de b.
+//                    si la resta entre los dos numeros es positivo me coloca b antes q a.
 //                    si es cero no hace nada
 
 
